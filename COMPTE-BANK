@@ -1,0 +1,42 @@
+class compte():
+    def __init__(self,nm,sl,da,pr) :
+        self.numero=nm  
+        self.solde= sl
+        self.date= da
+        self.property=pr
+    def getnumero(self) :
+         return self.numero
+    def setproperty(self,new):
+        self.property=new
+    def getsolde(self) :
+         return self.solde 
+    def getdate(self) :
+         return self.date     
+               
+     
+    def tostring(self):
+         return f"(le numero : {self.numero}  , le solde est : {self.solde} , la date  : {self.niveau} , , la property  : {self.property})"  
+
+       
+class comptecourant(compte) : 
+    def __init__(self,montant) :
+      super().__init__(nm,sl,da,pr,montant) 
+      self.montant=montant
+       
+    def getmontant(self) :
+         return self.montant 
+    
+    
+     return f"(le montant : {self.montant})" 
+
+class comptepargne(compte) :  
+    def __init__(self,nm,sl,da,pr,interet) :
+      super().__init__(nm,sl,da,pr) 
+        self.interet=interet
+        
+    def getinteret(self) :
+         return self.interet  
+         
+    def str (self):     
+     return f"(le interet : {self.interet})" 
+    
